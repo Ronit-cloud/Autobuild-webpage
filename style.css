@@ -1,0 +1,36 @@
+:root{
+  --bg:#f2f5f4; --ink:#14232b; --muted:#5b6b72; --line:#d3dcdb; --accent:#0b6e6e;
+  --serif:"Newsreader",Georgia,serif; --sans:"Inter Tight",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0f1b20; --ink:#e6eeee; --muted:#93a5aa; --line:#24363d; --accent:#4fc0bd}
+}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.65}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:40rem;margin:0 auto;padding:2rem 1.25rem 4rem}
+header.site{display:flex;justify-content:space-between;align-items:baseline;
+  padding-bottom:1rem;border-bottom:1px solid var(--line);font-family:var(--sans)}
+header.site a{text-decoration:none;color:var(--ink);font-weight:600}
+header.site nav a{font-weight:400;color:var(--muted);margin-left:1.25rem}
+.intro{margin:4rem 0 3rem}
+.intro h1{font-family:var(--sans);font-size:clamp(2.4rem,8vw,3.8rem);line-height:1.05;
+  letter-spacing:-.03em;margin:0 0 1rem}
+.intro p{color:var(--muted);font-size:1.1rem;margin:0;max-width:32rem}
+.post-list{list-style:none;margin:0;padding:0}
+.post-list li{padding:1.5rem 0;border-top:1px solid var(--line)}
+.post-list time{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+.post-list h2{font-family:var(--sans);font-size:1.4rem;margin:.2rem 0 .4rem;letter-spacing:-.01em}
+.post-list h2 a{color:var(--ink);text-decoration:none}
+.post-list h2 a:hover{color:var(--accent)}
+.post-list p{margin:0;color:var(--muted)}
+article h1{font-family:var(--sans);font-size:clamp(2rem,6vw,2.8rem);line-height:1.1;
+  letter-spacing:-.025em;margin:3rem 0 .5rem}
+article .meta{font-family:var(--sans);color:var(--muted);font-size:.9rem;margin-bottom:2rem}
+article h2{font-family:var(--sans);margin-top:2.5rem}
+article blockquote{margin:1.5rem 0;padding-left:1.25rem;border-left:3px solid var(--accent);color:var(--muted)}
+article code{font-size:.9em;background:var(--line);padding:.1em .35em;border-radius:3px}
+footer.site{margin-top:4rem;padding-top:1rem;border-top:1px solid var(--line);
+  font-family:var(--sans);font-size:.85rem;color:var(--muted)}
